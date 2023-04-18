@@ -45,6 +45,7 @@ catch
 
 finally
 {   
+    //SHUT UNIQUEMENT SI LE SOCKET ETAIT CONNECTE
     if(socket.Connected)
     {
         //FERME PROPREMENT LE SOCKET DANS LES DEUX SENS
