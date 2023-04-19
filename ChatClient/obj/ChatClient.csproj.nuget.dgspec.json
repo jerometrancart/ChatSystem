@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ChatSystem\\ChatClient\\ChatClient.csproj": {}
+    "C:\\ChatSystem\\chatclient\\ChatClient.csproj": {}
   },
   "projects": {
-    "C:\\ChatSystem\\ChatClient\\ChatClient.csproj": {
+    "C:\\ChatSystem\\chatclient\\ChatClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ChatSystem\\ChatClient\\ChatClient.csproj",
+        "projectUniqueName": "C:\\ChatSystem\\chatclient\\ChatClient.csproj",
         "projectName": "ChatClient",
-        "projectPath": "C:\\ChatSystem\\ChatClient\\ChatClient.csproj",
+        "projectPath": "C:\\ChatSystem\\chatclient\\ChatClient.csproj",
         "packagesPath": "C:\\Users\\jerom\\.nuget\\packages\\",
-        "outputPath": "C:\\ChatSystem\\ChatClient\\obj\\",
+        "outputPath": "C:\\ChatSystem\\chatclient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -52,6 +52,7 @@ try
             byte[] buffer = new byte[128];
             //STOCKER LE RESULTAT DE CE QUI A REELLEMENT ETE LU
             int nb = clientSocket.Receive(buffer);
+            if(nb == 0 ) break;
             //AFFICHE LE MESSAGE RECU + SYSTEM.TEXT.DECODE(LE BUFFER, DEPUIS QUEL INDEX, LE NOMBRE D'OCTETS)
             Console.WriteLine("Message reçu : " + Encoding.UTF8.GetString(buffer, 0, nb));
         }
