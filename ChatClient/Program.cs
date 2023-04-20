@@ -67,18 +67,27 @@ finally
 void LireMessage(object? obj)
 {
     if (obj is Socket socket)
-    {
-        while (true)
-        {
-            //CREE UN BUFFER POUR LA LECTURE DES MESSAGES MEME SI LE CLIENT N'EN A PAS ENVOYE
-            byte[] buffer = new byte[4096];
-            int read = socket.Receive(buffer);
-            if (read > 0)
+    {   
+        try {
+
+        
+            while (true)
             {
-                var message = Encoding.UTF8.GetString(buffer, 0, read);
-                //ECRIT LE MESSAGE A RECEPTION
-                System.Console.WriteLine(message);
+                //CREE UN BUFFER POUR LA LECTURE DES MESSAGES MEME SI LE CLIENT N'EN A PAS ENVOYE
+                byte[] buffer = new byte[4096];
+                int read = socket.Receive(buffer);
+                if (read > 0)
+                {
+                    var message = Encoding.UTF8.GetString(buffer, 0, read);
+                    //ECRIT LE MESSAGE A RECEPTION
+                    System.Console.WriteLine(message);
+                }
             }
+
+        }
+        catch
+        {
+            System.Console.WriteLine("La connection a été interrompue.");
         }
     }
 }
