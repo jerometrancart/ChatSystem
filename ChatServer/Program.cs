@@ -35,6 +35,18 @@ try
 
     //CREE UNE NOUVELLE INSTANCE DE SOCKET QUI ATTEND D'ACCEPTER LA CONNEXION
     var clientSocket = socket.Accept();
+    //OUVRIR UN THREAD POUR GERER CHAQUE NOUVEAU CLIENT
+    Thread threadClient = new Thread(ListenClient);
+    threadClient.Start(clientSocket);
+
+    void ListenClient(object? clientSocket)
+    {
+        if(clientSocket is Socket socket)
+        {
+            
+        }
+    }
+
     Console.WriteLine("Connexion réussie !");
     if (clientSocket.RemoteEndPoint is not null)
     {
